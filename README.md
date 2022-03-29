@@ -5,11 +5,13 @@
 - 请修改为目标数据库，本地/远端
 - 修改用户名/密码
 
-
 需要配置环境：
 1. mybatis-plus
 2. lombok
 3. SpringBoot
+
+数据库管理工具：
+- 建议使用：Navicat
 
 Done:
 1. User Table Created
