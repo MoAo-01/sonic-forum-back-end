@@ -14,17 +14,17 @@ import java.util.Date;
 @AllArgsConstructor
 public class Post implements Serializable {
     private static final long serialVersionUID = 1L;
-    private Integer uid;                //'帖子id'
+    private Integer pid;                //'帖子id'
     private String username;            //'用户名'
-    private String postName;           //'帖子名称'
+    private String postName;            //'帖子名称'
     private String text;                //'帖子内容'
     private Integer likes;              //'点赞'
     private Integer hates;              //'踩'
-    private String accessPermission;   //'访问权限: only-me/public/private'
-    private Integer accessTimes;       //'访问次数'
-    private Integer isDelete;          //'是否删除：0-未删除，1-已删除'
-    private Integer isSelect;          //'是否精选：0-未精选，1-精选'
-    private Integer isAbove;           //'是否精选：0-不置顶，1-置顶'
+    private String accessPermission;    //'访问权限: only-me/public/private'
+    private Integer accessTimes;        //'访问次数'
+    private Integer isDelete;           //'是否删除：0-未删除，1-已删除'
+    private Integer isSelect;           //'是否精选：0-未精选，1-精选'
+    private Integer isAbove;            //'是否精选：0-不置顶，1-置顶'
     // 标签max=8
     private String tag1;
     private String tag2;

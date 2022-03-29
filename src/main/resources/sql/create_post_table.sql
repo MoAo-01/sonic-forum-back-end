@@ -1,5 +1,5 @@
 CREATE TABLE post (
-    uid INT AUTO_INCREMENT COMMENT '帖子id',
+    pid INT AUTO_INCREMENT COMMENT '帖子id',
     username VARCHAR(20) NOT NULL COMMENT '用户名',
     post_name VARCHAR(128) NOT NULL COMMENT '帖子名称',
     text TEXT NOT NULL COMMENT '帖子内容',
@@ -33,5 +33,5 @@ CREATE TABLE post (
     created_time DATETIME COMMENT '日志-创建时间',
     modified_user VARCHAR(20) COMMENT '日志-最后修改执行人',
     modified_time DATETIME COMMENT '日志-最后修改时间',
-    PRIMARY KEY (uid)
+    PRIMARY KEY (pid)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
