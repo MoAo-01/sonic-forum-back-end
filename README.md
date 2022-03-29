@@ -1,9 +1,9 @@
 # sonic-forum-back-end
 
 配置文件：
-src\main\resources\application.properties
-请修改为目标数据库，本地/远端
-修改用户名/密码
+- src\main\resources\application.properties
+- 请修改为目标数据库，本地/远端
+- 修改用户名/密码
 
 
 需要配置环境：
