@@ -14,6 +14,9 @@
 - 建议使用：Navicat
 - [激活指南](https://www.newadmin.cn/archives/1852)
 
+Sql文件路径：
+- src\main\resources\sql
+
 Done:
 1. User Table Created
 2. Post Table Created
