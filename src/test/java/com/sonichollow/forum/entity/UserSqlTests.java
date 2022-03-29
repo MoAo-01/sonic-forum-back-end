@@ -1,19 +1,13 @@
-package com.sonichollow.forum;
+package com.sonichollow.forum.entity;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.sonichollow.forum.entity.User;
-import org.junit.jupiter.api.Test;
 import com.sonichollow.forum.mapper.UserMapper;
-import org.springframework.boot.test.context.SpringBootTest;
+import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
-
-@SpringBootTest
-class ForumApplicationTests {
+public class UserSqlTests {
     @Autowired
     private UserMapper userMapper;
 
@@ -55,5 +49,4 @@ class ForumApplicationTests {
 
         System.out.println("------test successful------");
     }
-
 }
