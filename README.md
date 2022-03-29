@@ -12,6 +12,7 @@
 
 数据库管理工具：
 - 建议使用：Navicat
+- [激活指南](https://www.newadmin.cn/archives/1852)
 
 Done:
 1. User Table Created
