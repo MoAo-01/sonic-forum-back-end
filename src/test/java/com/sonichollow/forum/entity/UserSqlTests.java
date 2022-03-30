@@ -11,19 +11,15 @@ public class UserSqlTests {
     @Autowired
     private UserMapper userMapper;
 
+
     @Test
     void testMybatisPlus() {
         System.out.println("------test mybatis-plus------");
         System.out.println("------test insert------");
         User user1 = new User();
-        user1.setUsername("Alice");
+        user1.setUsername("ABC");
         user1.setPassword("123456");
         userMapper.insert(user1);
-
-        User user2 = new User();
-        user2.setUsername("Bob");
-        user2.setPassword("123456");
-        userMapper.insert(user2);
 
         System.out.println("------test select all------");
         List<User> userList=userMapper.selectList(null);
@@ -49,4 +45,22 @@ public class UserSqlTests {
 
         System.out.println("------test successful------");
     }
+
+    public User selectByUsername(String username){
+        User user;
+        try{
+            user=userMapper.selectOne(new QueryWrapper<User>().eq("username",username));
+            return user;
+        }
+        catch (Exception e){
+            return null;
+        }
+    }
+
+    @Test
+    void testSelectByUsernameNotExist(){
+        User user=selectByUsername("Alice");
+        System.out.println(user);
+    }
+
 }
