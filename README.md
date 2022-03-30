@@ -23,5 +23,7 @@ Done:
 3. CURD JUnit Tests
 
 To Do:
-1. User 服务层
-1. Post 服务层
+1. User 服务层 (基本完成)
+2. User Mapper 层
+3. Post 服务层
+4. Post Mapper 层
