@@ -1,9 +1,6 @@
 package com.sonichollow.forum.service.ex;
 
-import lombok.ToString;
-
-@ToString
-public class RepeatUsernameException extends RuntimeException{
+public class RepeatUsernameException extends ServiceException {
     public RepeatUsernameException() {
     }
 
@@ -21,5 +18,10 @@ public class RepeatUsernameException extends RuntimeException{
 
     public RepeatUsernameException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
         super(message, cause, enableSuppression, writableStackTrace);
+    }
+
+    @Override
+    public String toString() {
+        return getClass() + "::" + "RepeatUsernameException{" + getMessage() + "}";
     }
 }

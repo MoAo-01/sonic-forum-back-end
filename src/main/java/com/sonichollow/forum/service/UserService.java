@@ -1,31 +1,42 @@
-package com.sonichollow.forum.service.impl;
+package com.sonichollow.forum.service;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import com.sonichollow.forum.entity.User;
 import com.sonichollow.forum.mapper.UserMapper;
-import com.sonichollow.forum.service.IUserService;
 import com.sonichollow.forum.service.ex.InsertException;
+import com.sonichollow.forum.service.ex.NoSuchUsernameException;
+import com.sonichollow.forum.service.ex.PasswordWrongException;
+import com.sonichollow.forum.service.ex.RepeatUsernameException;
+import org.apache.ibatis.annotations.Mapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.stereotype.Service;
 import org.springframework.util.DigestUtils;
 
 import java.util.Date;
 import java.util.UUID;
 
-public class UserServiceImpl implements IUserService {
+@Service
+public class UserService {
     @Autowired
     private UserMapper userMapper;
 
-    public User selectByUsername(String username){
-        User user= userMapper.selectOne(new QueryWrapper<User>().eq("username",username));
-        return user;
+    private User selectByUsername(String username){
+        User user;
+        try{
+            user=userMapper.selectOne(new QueryWrapper<User>().eq("username",username));
+            return user;
+        }
+        catch (Exception e){
+            return null;
+        }
     }
 
-    @Override
     public void register(User user) {
         String username=user.getUsername();
         if(selectByUsername(username)!=null){
-            throw new UsernameNotFoundException("用户名重复");
+            throw new RepeatUsernameException("用户名重复");
         }
         String oldPassword = user.getPassword();
         String salt = UUID.randomUUID().toString().toUpperCase();
@@ -47,22 +58,27 @@ public class UserServiceImpl implements IUserService {
 
     }
 
-    @Override
-    public void login(User user) {
-
+    public User login(User user) {
+        String username=user.getUsername();
+        String password=user.getPassword();
+        User selectResult=selectByUsername(username);
+        if(selectResult==null){
+            throw new NoSuchUsernameException("用户不存在");
+        }
+        String salt=selectResult.getSalt();
+        String newPassword=getMD5Password(password,salt);
+        if(!selectResult.getPassword().equals(newPassword)){
+            throw new PasswordWrongException("密码错误");
+        }
+        return selectResult;
     }
 
-    @Override
     public void update(User user) {
-
+        UpdateWrapper<User> wrapper = new UpdateWrapper<User>();
+        wrapper.eq("username",user.getUsername());
+        userMapper.update(user,wrapper);
     }
 
-    /**
-     * 密码加盐
-     * @param password
-     * @param salt
-     * @return 加盐密码
-     */
     private String getMD5Password(String password, String salt) {
         for (int i = 0; i < 3; i++) {
             password = DigestUtils.md5DigestAsHex((salt + password + salt).getBytes()).toUpperCase();

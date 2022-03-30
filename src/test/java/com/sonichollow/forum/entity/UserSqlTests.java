@@ -4,9 +4,12 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.sonichollow.forum.mapper.UserMapper;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.List;
 
+
+@SpringBootTest
 public class UserSqlTests {
     @Autowired
     private UserMapper userMapper;
@@ -59,7 +62,7 @@ public class UserSqlTests {
 
     @Test
     void testSelectByUsernameNotExist(){
-        User user=selectByUsername("Alice");
+        User user=selectByUsername("王小明");
         System.out.println(user);
     }
 
