@@ -21,9 +21,16 @@ Done:
 1. User Table Created
 2. Post Table Created
 3. CURD JUnit Tests
+4. User 服务层 (基本完成)
 
 To Do:
-1. User 服务层 (基本完成)
-2. User Controller 层
-3. Post 服务层
-4. Post Controller 层
+1. User Controller 层 (User Get接口完成)
+2. Post 服务层
+3. Post Controller 层
+
+About Spring Security
+1. 声明了Spring安全框架，每次访问web前先要做开发认真
+2. 用户名: 默认为 user
+3. 密码: 每次自动生成，在idea的命令框由框架自动打印
+4. 登录后可以正常访问相关网址，做接口测试
+5. ToDo 后期把认证关闭，增加拦截器
