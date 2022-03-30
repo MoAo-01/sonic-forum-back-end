@@ -60,6 +60,7 @@
 {
     "state":404,
     "message":"Not Found"
+    "data":{}
 }
 ```
 
