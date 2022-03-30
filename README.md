@@ -29,8 +29,8 @@ To Do:
 3. Post Controller 层
 
 About Spring Security
-1. 声明了Spring安全框架，每次访问web前先要做开发认真
+1. 声明了Spring安全框架，每次访问web前先要做开发认证
 2. 用户名: 默认为 user
-3. 密码: 每次自动生成，在idea的命令框由框架自动打印
+3. 密码: 在 idea 的命令框内，每次由框架自动生成，打印
 4. 登录后可以正常访问相关网址，做接口测试
 5. ToDo 后期把认证关闭，增加拦截器
