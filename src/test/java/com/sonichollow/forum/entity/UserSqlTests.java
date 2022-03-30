@@ -39,13 +39,10 @@ public class UserSqlTests {
     @Test
     void testSelectByUsername(){
         System.out.println("------test select by username------");
-
 //        Map map=new HashMap<>();
 //        map.put("username","Alice");
 //        List<User> userList=userMapper.selectByMap(map);
 //        userList.forEach(System.out::println);
-
-
         System.out.println(
                 userMapper.selectOne(new QueryWrapper<User>().eq("username", "Alice"))
         );
