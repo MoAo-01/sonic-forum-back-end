@@ -47,7 +47,7 @@
     安装方式：
     1. [网页下载](http://jsonhandle.sinaapp.com/)
     2. Chrome浏览器键入: `chrome://extensions/` 回车
-    3. 推入下载的 `JSON-handle_0.6.1.crx` 安装包到网页，完成
+    3. 拖入下载的 `JSON-handle_0.6.1.crx` 安装包到网页，完成
     4. 效果展示：
 
 ![image](https://user-images.githubusercontent.com/83717535/160980775-3b6fbb43-dc1d-42b9-98d5-750c1e1f606a.png)
