@@ -50,6 +50,8 @@
     4. 效果展示：
 
 ![image](https://user-images.githubusercontent.com/83717535/160980775-3b6fbb43-dc1d-42b9-98d5-750c1e1f606a.png)
+![image](https://user-images.githubusercontent.com/83717535/160981061-94cf3ff4-4146-4a0a-87e5-a96fef533e3a.png)
+
 
 
 [API文档说明总结](https://blog.csdn.net/qq_34207366/article/details/84579475)
