@@ -22,12 +22,13 @@
 2. Post Table Created
 3. CURD JUnit Tests
 4. User 服务层 (基本完成)
+5. About 验证码 完成[参考资料](https://www.cnblogs.com/FlyHeLanMan/p/6293991.html)
 
 ## To Do:
 1. User Controller 层 (User Get接口完成)
 2. Post 服务层
 3. Post Controller 层
-4. About 验证码 [参考资料](https://www.cnblogs.com/FlyHeLanMan/p/6293991.html)
+
 
 ## About Spring Security
 1. 声明了Spring安全框架，每次访问web前先要做开发认证
@@ -74,6 +75,10 @@
     "data":{}
 }
 ```
+
+## 接口代码路径
+- path `src\main\java\com\sonichollow\forum\mapper`
+- 接口具体名称(待定)
 
 ## 接口维护/测试工具
 
