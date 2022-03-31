@@ -30,12 +30,12 @@
 3. Post Controller 层
 
 
-## About Spring Security
+## About Spring Security (已fixed login)
 1. 声明了Spring安全框架，每次访问web前先要做开发认证
 2. 用户名: 默认为 user
 3. 密码: 在 idea 的命令框内，每次由框架自动生成，打印
 4. 登录后可以正常访问相关网址，做接口测试
-5. ToDo 后期把认证关闭，增加拦截器
+5. ToDo 后期把认证关闭，增加拦截器 (Done)
 
 ## API文档
 了解接口文档的规范，接口分为四部分：请求方法、URL、请求参数、返回参数：
