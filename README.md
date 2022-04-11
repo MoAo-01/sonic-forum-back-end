@@ -23,11 +23,11 @@
 3. CURD JUnit Tests
 4. User 服务层 (基本完成)
 5. About 验证码 完成[参考资料](https://www.cnblogs.com/FlyHeLanMan/p/6293991.html)
+6. Post 服务层
 
 ## To Do:
 1. User Controller 层 (User Get接口完成)
-2. Post 服务层
-3. Post Controller 层
+2. Post Controller 层 (发帖部分完成)
 
 
 ## About Spring Security (已fixed login)

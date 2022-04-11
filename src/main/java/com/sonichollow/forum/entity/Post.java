@@ -1,6 +1,8 @@
 package com.sonichollow.forum.entity;
 
 
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableLogic;
 import lombok.*;
 
 import java.io.Serializable;
@@ -14,6 +16,8 @@ import java.util.Date;
 @AllArgsConstructor
 public class Post implements Serializable {
     private static final long serialVersionUID = 1L;
+    //    @TableId(value ="pid",type = IdType.AUTO)
+    @TableId
     private Integer pid;                //'帖子id'
     private String username;            //'用户名'
     private String postName;            //'帖子名称'
@@ -22,6 +26,7 @@ public class Post implements Serializable {
     private Integer hates;              //'踩'
     private String accessPermission;    //'访问权限: only-me/public/private'
     private Integer accessTimes;        //'访问次数'
+    @TableLogic
     private Integer isDelete;           //'是否删除：0-未删除，1-已删除'
     private Integer isSelect;           //'是否精选：0-未精选，1-精选'
     private Integer isAbove;            //'是否精选：0-不置顶，1-置顶'
